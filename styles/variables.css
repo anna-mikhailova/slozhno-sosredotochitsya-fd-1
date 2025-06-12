@@ -2,3 +2,46 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  --main-font-size: 18px;
+  --main-font-weight: normal;
+  --accent-font-weight: bold;
+  --padding-size: 10px;
+  --accent-color: #ff0070;
+  --accent-font-color: #ff0070;
+  --accent-font-color-transparent: #ff007040;
+  --secondary-accent-color: #db00ff;
+  --accent-decor-font-color: #000028;
+  --main-text-font-color: #f1b2ce;
+  --background-pic-url: url("/images/cover-image-dark.png");
+  --slogan-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --main-padding-block: 40px;
+  --main-gap_between_sections: 50px;
+  --grid-template-columns: 1fr;
+  --header-padding-block: 6.5vh 5vh;
+  --section-line-heigh: 23.4px;
+  --menu-list-gap: 10px;
+  --section-gap: 20px;
+  --paragraph-top-padding: 10px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --slogan-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --padding-size: 20px;
+    --grid-template-columns: repeat(3, 1fr);
+    --header-padding-block: 11vh 10vh;
+    --main-padding-block: 60px;
+    --main-gap_between_sections: 80px;
+    --columns-left-padding: 8px;
+    --menu-list-gap: 8px;
+  }
+}
+
+@media (width >= 1024px) {
+  :root {
+    --header-padding-block: var(--padding-size) 10vh;
+    --columns-left-padding: 0px;
+    --menu-list-gap: 10px;
+  }
+}
